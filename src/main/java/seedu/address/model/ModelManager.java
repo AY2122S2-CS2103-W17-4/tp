@@ -129,6 +129,13 @@ public class ModelManager implements Model {
     }
 
     @Override
+    public void sortedPersonList() {
+        addressBook.sortPerson();
+
+        updateFilteredPersonList(PREDICATE_SHOW_ALL_PERSONS);
+    }
+
+    @Override
     public boolean equals(Object obj) {
         // short circuit if same object
         if (obj == this) {
