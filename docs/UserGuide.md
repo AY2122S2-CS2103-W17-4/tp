@@ -108,14 +108,14 @@ Format: `appledit INDEX [n/APPLICANT_NAME] [d/DOB] [g/GENDER] [p/PHONE_NUMBER] [
   list. The index **must be a positive integer** 1, 2, 3, …​
 * At least one of the optional fields must be provided.
 * Existing values will be updated to the input values.
-* When editing tags, the existing tags of the person will be removed i.e adding of tags is not cumulative.
+* When editing tags, the existing tags of the applicant will be removed i.e adding of tags is not cumulative.
 * You can remove all the Applicant’s tags by typing `t/` without
     specifying any tags after it.
 
 Examples:
-*  `appledit 1 n/Belle d/1960-03-04 g/F p/81234567` Edits the name, DOB, gender and phone number of the 1st person 
+*  `appledit 1 n/Belle d/1960-03-04 g/F p/81234567` Edits the name, DOB, gender and phone number of the 1st applicant 
    to be `Belle`, `1960-03-04`, `F` and `81234567` respectively.
-*  `appledit 2 e/belle@yahoo.com a/13 Computing Drive 612345 t/` Edits the email and address of the 2nd person to be 
+*  `appledit 2 e/belle@yahoo.com a/13 Computing Drive 612345 t/` Edits the email and address of the 2nd applicant to be 
    `belle@yahoo.com` and `13 Computing Drive 612345` respectively, and clears all existing tags.
 
 ### Deleting an Applicant : `appldel`
@@ -129,8 +129,8 @@ Format: `appdel INDEX`
 * The index **must be a positive integer** 1, 2, 3, …​
 
 Examples:
-* `list` followed by `delete 2` deletes the 2nd person in the address book.
-* `find Betsy` followed by `delete 1` deletes the 1st person in the results of the `find` command.
+* `list` followed by `delete 2` deletes the 2nd applicant in the address book.
+* `find Betsy` followed by `delete 1` deletes the 1st applicant in the results of the `find` command.
 
 ### Adding positions : `posadd`
 
