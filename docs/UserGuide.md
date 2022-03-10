@@ -132,21 +132,21 @@ Examples:
 * `list` followed by `delete 2` deletes the 2nd person in the address book.
 * `find Betsy` followed by `delete 1` deletes the 1st person in the results of the `find` command.
 
-### Adding positions : `posadd`
+### Adding positions : `add -p`
 
 Adds a new open position to HireLah.
-Format: `posadd POSITION_NAME n/NUM_OPENINGS [d/DESCRIPTION] [r/REQUIREMENTS]`
+Format: `add -p POSITION_NAME n/NUM_OPENINGS [d/DESCRIPTION] [r/REQUIREMENTS]`
 * Positions must have a **unique name**.
 * Name provided is case-insensitive.
 * Number of openings in the position must be **0 or more** 0, 1, 2, …​
 
 Examples:
-* `posadd Senior Software Engineer n/3 d/More than 5 years experience r/JavaScript r/HTML r/CSS`
+* `add -p Senior Software Engineer n/3 d/More than 5 years experience r/JavaScript r/HTML r/CSS`
 
-### Edit positions : `posedit`
+### Edit positions : `edit -p`
 
 Edit an existing position in HireLah.
-Format: `posedit POSITION_NAME [n/NUM_OPENINGS] [d/DESCRIPTION] [r/REQUIREMENTS]`
+Format: `edit -p POSITION_NAME [n/NUM_OPENINGS] [d/DESCRIPTION] [r/REQUIREMENTS]`
 
 * Edits the available position with POSITION_NAME.
 * Position name provided is case-insensitive.
@@ -156,24 +156,24 @@ Format: `posedit POSITION_NAME [n/NUM_OPENINGS] [d/DESCRIPTION] [r/REQUIREMENTS]
 * Requirements can be removed by providing an empty requirement field. i.e. r/
 
 Examples:
-* `posedit Senior Frontend Software Engineer n/5`
-* `posedit Senior Frontend Software Engineer r/JavaScript r/React`
+* `edit -p Senior Frontend Software Engineer n/5`
+* `edit -p Senior Frontend Software Engineer r/JavaScript r/React`
 
-### Delete positions : `posdel`
+### Delete positions : `del -p`
 
 Deletes an existing position in HireLah.
-Format: `posdel POSITION_NAME`
+Format: `del -p POSITION_NAME`
 * Existing position with the specified name is deleted.
 * The position name has to match with the position that is to be deleted.
 * Position name provided is case-insensitive.
 
 Examples:
-* `posdel Senior Frontend Software Engineer`
+* `del -p Senior Frontend Software Engineer`
 
-### List Positions : `poslist`
+### List Positions : `list -p`
 
 Lists all existing positions in HireLah.
-Format: `poslist`
+Format: `list -p`
 
 ### Adding Interview : `intvwadd`
 
