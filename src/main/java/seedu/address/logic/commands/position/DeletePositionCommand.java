@@ -87,4 +87,11 @@ public class DeletePositionCommand extends DeleteCommand {
     public DataType getCommandDataType() {
         return DataType.POSITION;
     }
+
+    @Override
+    public boolean equals(Object other) {
+        return other == this // short circuit if same object
+                || (other instanceof DeletePositionCommand // instanceof handles nulls
+                && targetIndex.equals(((DeletePositionCommand) other).targetIndex)); // state check
+    }
 }
