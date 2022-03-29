@@ -107,7 +107,7 @@ public class DeleteApplicantCommandTest {
      * Updates {@code model}'s filtered list to show no one.
      */
     private void showNoPerson(Model model) {
-        model.updateFilteredPersonList(p -> false);
+        model.updateFilteredApplicantList(p -> false);
 
         assertTrue(model.getFilteredApplicantList().isEmpty());
     }

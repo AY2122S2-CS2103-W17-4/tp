@@ -82,6 +82,11 @@ public class ModelStub implements Model {
     }
 
     @Override
+    public void updateFilteredApplicantList(Predicate<Applicant> predicate) {
+        throw new AssertionError("This method should not be called.");
+    }
+
+    @Override
     public ObservableList<Interview> getFilteredInterviewList() {
         throw new AssertionError("This method should not be called.");
     }
@@ -90,11 +95,7 @@ public class ModelStub implements Model {
     public ObservableList<Position> getFilteredPositionList() {
         throw new AssertionError("This method should not be called.");
     }
-
-    @Override
-    public void updateFilteredPersonList(Predicate<Applicant> predicate) {
-        throw new AssertionError("This method should not be called.");
-    }
+    
 
     @Override
     public void addInterview(Interview interview) {

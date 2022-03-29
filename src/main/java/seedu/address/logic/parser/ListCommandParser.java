@@ -5,10 +5,10 @@ import static seedu.address.commons.core.DataTypeFlags.FLAG_INTERVIEW;
 import static seedu.address.commons.core.DataTypeFlags.FLAG_POSITION;
 
 import seedu.address.logic.commands.ListCommand;
-import seedu.address.logic.commands.applicant.ListApplicantCommand;
-import seedu.address.logic.commands.interview.ListInterviewCommand;
-import seedu.address.logic.commands.position.ListPositionCommand;
+import seedu.address.logic.parser.applicants.ListApplicantCommandParser;
 import seedu.address.logic.parser.exceptions.ParseException;
+import seedu.address.logic.parser.interview.ListInterviewCommandParser;
+import seedu.address.logic.parser.position.ListPositionCommandParser;
 
 public class ListCommandParser implements Parser<ListCommand> {
 
@@ -20,13 +20,14 @@ public class ListCommandParser implements Parser<ListCommand> {
     @Override
     public ListCommand parse(String args) throws ParseException {
         char flag = ArgumentTokenizer.getFlag(args.trim());
+        String argsWithoutFlag = ArgumentTokenizer.removeFlag(args.trim());
 
         if (flag == FLAG_APPLICANT) {
-            return new ListApplicantCommand();
+            return new ListApplicantCommandParser().parse(argsWithoutFlag);
         } else if (flag == FLAG_INTERVIEW) {
-            return new ListInterviewCommand();
+            return new ListInterviewCommandParser().parse(argsWithoutFlag);
         } else if (flag == FLAG_POSITION) {
-            return new ListPositionCommand();
+            return new ListPositionCommandParser().parse(argsWithoutFlag);
         }
 
         return null;

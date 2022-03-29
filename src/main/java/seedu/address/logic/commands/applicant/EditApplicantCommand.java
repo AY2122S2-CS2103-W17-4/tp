@@ -30,6 +30,7 @@ import seedu.address.model.applicant.Age;
 import seedu.address.model.applicant.Applicant;
 import seedu.address.model.applicant.Email;
 import seedu.address.model.applicant.Gender;
+import seedu.address.model.applicant.HiredStatus;
 import seedu.address.model.applicant.Name;
 import seedu.address.model.applicant.Phone;
 import seedu.address.model.tag.Tag;
@@ -91,7 +92,7 @@ public class EditApplicantCommand extends EditCommand {
         }
 
         model.setPerson(applicantToEdit, editedApplicant);
-        model.updateFilteredPersonList(PREDICATE_SHOW_ALL_PERSONS);
+        model.updateFilteredApplicantList(PREDICATE_SHOW_ALL_PERSONS);
         return new CommandResult(String.format(MESSAGE_EDIT_PERSON_SUCCESS, editedApplicant), getCommandDataType());
     }
 
@@ -114,10 +115,11 @@ public class EditApplicantCommand extends EditCommand {
         Age updatedAge = editApplicantDescriptor.getAge().orElse(applicantToEdit.getAge());
         Address updatedAddress = editApplicantDescriptor.getAddress().orElse(applicantToEdit.getAddress());
         Gender updatedGender = editApplicantDescriptor.getGender().orElse(applicantToEdit.getGender());
+        HiredStatus updatedHiredStatus = editApplicantDescriptor.getStatus().orElse(applicantToEdit.getStatus());
         Set<Tag> updatedTags = editApplicantDescriptor.getTags().orElse(applicantToEdit.getTags());
 
         return new Applicant(updatedName, updatedPhone, updatedEmail, updatedAge, updatedAddress,
-                updatedGender, updatedTags);
+                updatedGender, updatedHiredStatus, updatedTags);
     }
 
     @Override
@@ -149,6 +151,7 @@ public class EditApplicantCommand extends EditCommand {
         private Age age;
         private Address address;
         private Gender gender;
+        private HiredStatus hiredStatus;
         private Set<Tag> tags;
 
         public EditApplicantDescriptor() {}
@@ -164,6 +167,7 @@ public class EditApplicantCommand extends EditCommand {
             setAge(toCopy.age);
             setAddress(toCopy.address);
             setGender(toCopy.gender);
+            setStatus(toCopy.hiredStatus);
             setTags(toCopy.tags);
         }
 
@@ -220,6 +224,14 @@ public class EditApplicantCommand extends EditCommand {
 
         public Optional<Gender> getGender() {
             return Optional.ofNullable(gender);
+        }
+
+        public void setStatus(HiredStatus hiredStatus) {
+            this.hiredStatus = hiredStatus;
+        }
+
+        public Optional<HiredStatus> getStatus() {
+            return Optional.ofNullable(hiredStatus);
         }
 
         /**

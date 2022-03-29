@@ -88,7 +88,7 @@ public interface Model {
      * Updates the filter of the filtered applicant list to filter by the given {@code predicate}.
      * @throws NullPointerException if {@code predicate} is null.
      */
-    void updateFilteredPersonList(Predicate<Applicant> predicate);
+    void updateFilteredApplicantList(Predicate<Applicant> predicate);
 
     /**
      * Returns true if an interview already exists in the address book.

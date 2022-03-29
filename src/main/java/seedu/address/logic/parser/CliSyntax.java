@@ -22,4 +22,7 @@ public class CliSyntax {
     public static final Prefix PREFIX_NUM_OPENINGS = new Prefix("o/");
     public static final Prefix PREFIX_DESCRIPTION = new Prefix("d/");
     public static final Prefix PREFIX_REQUIREMENT = new Prefix("r/");
+    // List parser
+    public static final Prefix PREFIX_FILTER_TYPE = new Prefix("f/");
+    public static final Prefix PREFIX_FILTER_ARGUMENT = new Prefix("a/");
 }
