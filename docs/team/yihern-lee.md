@@ -9,6 +9,9 @@ HireLah is a desktop app that helps recruiters to manage talent and job candidat
 
 Given below are my contributions to the project.
 
+### Summary of Contributions:
+Given below are my contributions to the project.
+
 * **New Feature**: Position
     * New Position data type to represent a position in the company that is open for hire.
     * Position tracks the number of openings, as well as, the number of offers handed out the applicants.
@@ -23,10 +26,11 @@ Given below are my contributions to the project.
 to the project.
 
 * **Project management**:
-    * Reviewed 18 PRs.
+    * Reviewed 23 PRs.
     * Left constructive feedbacks on PRs [#76](https://github.com/AY2122S2-CS2103-W17-4/tp/pull/76), [#83](https://github.com/AY2122S2-CS2103-W17-4/tp/pull/83),
   [#109](https://github.com/AY2122S2-CS2103-W17-4/tp/pull/109), [#156](https://github.com/AY2122S2-CS2103-W17-4/tp/pull/156),
       [#158](https://github.com/AY2122S2-CS2103-W17-4/tp/pull/158).
+    * Set up issue for main v1.3 feature of tracking interview status [#122](https://github.com/AY2122S2-CS2103-W17-4/tp/issues/122)
 
 * **Enhancements to existing features**:
     * Made changed or advised on changes to the validation regex for fields in Applicant (refactored from Person).
@@ -41,7 +45,9 @@ to the project.
         * Use case for editing position.
         * Explanation for the implementation of Position.
         * Sequence diagram for `DeleteApplicantCommand`.
-
+        * Update diagram to reflect new class name `HireLah` instead of `AddressBook`.
+        * Add manual testing instructions for `add` command.
+    
 * **Community**:
     * Contribute 15 bug reports for PE dry run.
     * Forum contributions:
