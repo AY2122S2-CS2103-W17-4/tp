@@ -46,7 +46,6 @@ public class FailInterviewCommand extends Command {
 
         Interview failedInterview = new Interview(interviewToFail.getApplicant(), interviewToFail.getDate(),
                 interviewToFail.getPosition());
-
         failedInterview.markAsFailed();
         model.setInterview(interviewToFail, failedInterview);
 

@@ -36,7 +36,7 @@ import seedu.address.model.applicant.Phone;
 import seedu.address.model.tag.Tag;
 
 /**
- * Edits the details of an existing applicant in the address book.
+ * Edits the details of an existing applicant in the application.
  */
 public class EditApplicantCommand extends EditCommand {
 
@@ -58,7 +58,7 @@ public class EditApplicantCommand extends EditCommand {
 
     public static final String MESSAGE_EDIT_APPLICANT_SUCCESS = "Edited Applicant: %1$s";
     public static final String MESSAGE_NOT_EDITED = "At least one field to edit must be provided.";
-    public static final String MESSAGE_DUPLICATE_APPLICANT = "This applicant already exists in the address book.";
+    public static final String MESSAGE_DUPLICATE_APPLICANT = "This applicant already exists in HireLah.";
     private static final String MESSAGE_DUPLICATE_EMAIL = "The email is already used by %1$s";
     private static final String MESSAGE_DUPLICATE_PHONE = "The phone number is already used by %1$s";
 

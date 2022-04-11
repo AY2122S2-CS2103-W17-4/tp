@@ -14,11 +14,11 @@ import seedu.address.model.Model;
 import seedu.address.model.position.Position;
 
 /**
- * Adds a position in the address book.
+ * Adds a position in the application.
  */
 public class AddPositionCommand extends AddCommand {
 
-    public static final String MESSAGE_USAGE = COMMAND_WORD + " -p: Adds a position to the address book. "
+    public static final String MESSAGE_USAGE = COMMAND_WORD + " -p: Adds a position to the application. "
             + "Parameters: "
             + PREFIX_POSITION + "POSITION_NAME"
             + PREFIX_NUM_OPENINGS + "NUM_OPENINGS "
@@ -32,7 +32,7 @@ public class AddPositionCommand extends AddCommand {
             + PREFIX_REQUIREMENT + "Experience with SQL";
 
     public static final String MESSAGE_SUCCESS = "New position added: %1$s";
-    public static final String MESSAGE_DUPLICATE_POSITION = "This position already exists in the address book";
+    public static final String MESSAGE_DUPLICATE_POSITION = "This position already exists in HireLah application";
 
     private final Position toAdd;
 

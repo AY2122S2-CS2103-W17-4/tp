@@ -26,7 +26,7 @@ Given below are my contributions to the project.
   
 
 * **Code contributed**:
-  * Contributed over [1800+ LoC]((https://nus-cs2103-ay2122s2.github.io/tp-dashboard/?search=SethCKL&sort=groupTitle&sortWithin=title&timeframe=commit&mergegroup=&groupSelect=groupByRepos&breakdown=true&checkedFileTypes=docs~functional-code~test-code~other&since=2022-02-18))
+  * Contributed over [1700+ LoC](https://nus-cs2103-ay2122s2.github.io/tp-dashboard/?search=SethCKL&sort=groupTitle&sortWithin=title&timeframe=commit&mergegroup=&groupSelect=groupByRepos&breakdown=true&checkedFileTypes=docs~functional-code~test-code~other&since=2022-02-18)
   
 * **Project management**:
   * Reviewed 29 PRs.

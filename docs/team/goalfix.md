@@ -5,16 +5,16 @@ title: Wei Howe's Project Portfolio Page
 
 ### Project: HireLah
 
-###Overview
+### Overview
 HireLah is a desktop app that helps recruiters to manage talent and job candidates by tracking every step of the hiring 
 process, from offering positions to scheduling interviews with candidates. It is optimised for Command Line Interface 
 (CLI) users while still offering a GUI, so that power users can accomplish tasks much quicker by using commands . It is 
 written in Java, and has about 10 kLoC.
 
-###Summary of Contributions:
+### Summary of Contributions:
 Given below are my contributions to the project.
 
-* **New Feature**: Interviews:
+* **New Feature**: `Interviews`
   * New Interview data type to represent an `Applicant` 
   attending an `Interview` for a `Position`.
   * A successful interview allows the `Applicant` to be 
@@ -22,7 +22,7 @@ Given below are my contributions to the project.
   `accept` the interview. Core functionality of HireLah which 
   which is do hiring and matching.
   * `add` / `delete` / `pass` / `fail` / `accept` / `reject` 
-  commands for interview
+  commands for interview.
 
 
 * Other notable contributions to support this feature:
@@ -38,19 +38,22 @@ Given below are my contributions to the project.
   * Main in charge of setting up issues in the Github issue tracker,
   and creating milestones for the team.
   * Reviewed 52 PRs.
-  * Left constructive feedback on PRs [#76](https://github.com/AY2122S2-CS2103-W17-4/tp/pull/76), 
-  [#154](https://github.com/AY2122S2-CS2103-W17-4/tp/pull/154) [#158](https://github.com/AY2122S2-CS2103-W17-4/tp/pull/158)
+  * Left constructive feedback on several PRs, including but not limited to [#76](https://github.com/AY2122S2-CS2103-W17-4/tp/pull/76), 
+  [#154](https://github.com/AY2122S2-CS2103-W17-4/tp/pull/154) [#158](https://github.com/AY2122S2-CS2103-W17-4/tp/pull/158).
+  * Helped out team with [release management](https://github.com/AY2122S2-CS2103-W17-4/tp/releases) for v1.3.1.
+  * Provided git CLI advise and help to teammates.
   
 
 * **Documentation**:
-  * [User Guide]((https://ay2122s2-cs2103-w17-4.github.io/tp/UserGuide.html)):
+  * [User Guide](https://ay2122s2-cs2103-w17-4.github.io/tp/UserGuide.html):
     * Added documentation for the features of `interview`, including
     `add -i`, `delete -i`, `pass`, `fail`, `accept`, `reject`.
   * [Developer Guide](https://ay2122s2-cs2103-w17-4.github.io/tp/DeveloperGuide.html):
-    * Added use case for adding interviews.
-    * Updated sequence diagram for architecture overview.
+    * Added use case for adding applicants.
+    * Updated sequence diagram for architecture overview to reflect renamed classes.
     * Added activity diagram and explanation for tracking interview status.
-    * Added design consideration for adding of data.
+    * Added sequence diagram and design consideration for adding of data.
     
 * **Community**:
-  * Contributed [16 issues](https://github.com/goalfix/ped/issues) during PE dry run
+  * Contributed [16 issues](https://github.com/goalfix/ped/issues) during PE dry run.
+  * Contributed 9 posts to the module forum, including [reporting a potential bug](https://github.com/nus-cs2103-AY2122S2/forum/issues/228).

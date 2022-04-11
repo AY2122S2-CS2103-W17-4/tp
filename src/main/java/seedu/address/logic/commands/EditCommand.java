@@ -4,7 +4,7 @@ import seedu.address.logic.commands.exceptions.CommandException;
 import seedu.address.model.Model;
 
 /**
- * Edits the details of the specified data type in the address book.
+ * Edits the details of the specified data type in the application.
  */
 public abstract class EditCommand extends Command {
     public static final String COMMAND_WORD = "edit";

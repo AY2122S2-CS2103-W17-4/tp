@@ -31,7 +31,7 @@ import seedu.address.model.position.PositionOpenings;
 import seedu.address.model.position.Requirement;
 
 /**
- * Edits the details of an existing position in the address book.
+ * Edits the details of an existing position in the position.
  */
 public class EditPositionCommand extends EditCommand {
 

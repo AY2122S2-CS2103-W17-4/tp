@@ -229,9 +229,9 @@ public class Position {
             requirementString.append(requirement.requirementText);
             requirementString.append(" | ");
         }
-
+        String trimmedRequirementString = requirementString.substring(0, requirementString.length() - 3);
         return positionName.positionName + "," + escapeSpecialCharacters(description.descriptionText) + ","
-                + positionOpenings.toString() + "," + positionOffers.toString() + "," + requirementString;
+                + positionOpenings.toString() + "," + positionOffers.toString() + "," + trimmedRequirementString;
     }
 
     /**

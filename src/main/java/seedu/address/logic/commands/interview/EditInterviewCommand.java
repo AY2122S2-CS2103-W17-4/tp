@@ -23,7 +23,7 @@ import seedu.address.model.interview.Interview;
 import seedu.address.model.position.Position;
 
 /**
- * Edits the details of an existing interview in the address book.
+ * Edits the details of an existing interview in the application.
  */
 public class EditInterviewCommand extends EditCommand {
     public static final String MESSAGE_USAGE = COMMAND_WORD + " -i: Edits the details of an interview in Hirelah\n"

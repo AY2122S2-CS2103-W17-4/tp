@@ -20,7 +20,7 @@ import seedu.address.model.interview.Interview;
 import seedu.address.model.position.Position;
 
 /**
- * Deletes an applicant identified using it's displayed index from the address book,
+ * Deletes an applicant identified using it's displayed index from the application,
  * and the interviews associated with the applicant as well.
  */
 public class DeleteApplicantCommand extends DeleteCommand {

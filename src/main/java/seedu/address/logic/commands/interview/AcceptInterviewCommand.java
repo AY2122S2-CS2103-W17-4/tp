@@ -45,7 +45,6 @@ public class AcceptInterviewCommand extends Command {
         if (!interviewToAccept.isAcceptableInterview()) {
             throw new CommandException(MESSAGE_INTERVIEW_CANNOT_BE_ACCEPTED);
         }
-
         Applicant oldApplicant = interviewToAccept.getApplicant();
         if (oldApplicant.isHired()) {
             throw new CommandException(MESSAGE_APPLICANT_HAS_JOB);
@@ -55,15 +54,12 @@ public class AcceptInterviewCommand extends Command {
         Applicant newApplicant = interviewToAccept.getApplicant().setStatus(oldApplicant, newPosition);
         Interview acceptedInterview = new Interview(newApplicant, interviewToAccept.getDate(),
                 newPosition);
-
         // Interview has default status of "Pending", need to make it passed and then accepted
         acceptedInterview.markAsPassed();
         acceptedInterview.markAsAccepted();
-
         model.setInterview(interviewToAccept, acceptedInterview);
         model.updateApplicant(oldApplicant, newApplicant);
         model.updatePosition(oldPosition, newPosition);
-
         return new CommandResult(String.format(MESSAGE_ACCEPT_INTERVIEW_SUCCESS, acceptedInterview),
                 getCommandDataType());
     }

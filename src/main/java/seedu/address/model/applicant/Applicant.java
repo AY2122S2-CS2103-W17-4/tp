@@ -191,9 +191,10 @@ public class Applicant {
             tagString.append(tag.tagName);
             tagString.append(" | ");
         }
+        String trimmedTagString = tagString.substring(0, tagString.length() - 3);
         return name.fullName + "," + phone.value + "," + email.value + "," + age.value + ","
                 + escapeSpecialCharacters(address.value) + ","
-                + gender.value + "," + hiredStatus.toString() + "," + tagString;
+                + gender.value + "," + hiredStatus.toString() + "," + trimmedTagString;
     }
 
     /**

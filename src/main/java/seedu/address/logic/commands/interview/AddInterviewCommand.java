@@ -61,22 +61,18 @@ public class AddInterviewCommand extends AddCommand {
         if (applicantInInterview.isHired()) {
             throw new CommandException(MESSAGE_APPLICANT_HAS_JOB);
         }
-
         List<Position> lastShownPositionList = model.getFilteredPositionList();
         if (positionIndex.getZeroBased() >= lastShownPositionList.size()) {
             throw new CommandException(Messages.MESSAGE_INVALID_POSITION_DISPLAYED_INDEX);
         }
-
         Position positionInInterview = lastShownPositionList.get(positionIndex.getZeroBased());
         if (model.isSameApplicantPosition(applicantInInterview, positionInInterview)) {
             throw new CommandException(String.format(Messages.MESSAGE_APPLICANT_SAME_POSITION,
                     applicantInInterview.getName().fullName, positionInInterview.getPositionName().positionName));
         }
-
         if (!positionInInterview.canScheduleInterview()) {
             throw new CommandException(MESSAGE_POSITION_NO_OPENING);
         }
-
         Interview interviewToAdd = new Interview(applicantInInterview, date, positionInInterview);
         if (model.hasConflictingInterview(interviewToAdd)) {
             throw new CommandException(Messages.MESSAGE_CONFLICTING_INTERVIEW);

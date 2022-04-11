@@ -18,6 +18,6 @@ public class Messages {
     public static final String MESSAGE_DUPLICATE_INTERVIEW = "This interview already exists in the address book";
     public static final String MESSAGE_CONFLICTING_INTERVIEW = "This interview would cause a conflict of timings with"
             + " a current interview in the address book. Interviews must be "
-            + "at least 1 hour apart for the same candidate.";
+            + "at least 1 hour apart for the same applicant.";
     public static final String MESSAGE_APPLICANT_SAME_POSITION = "%1$s already has an interview for %2$s";
 }

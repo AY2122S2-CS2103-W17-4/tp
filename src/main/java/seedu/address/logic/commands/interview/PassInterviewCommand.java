@@ -37,23 +37,19 @@ public class PassInterviewCommand extends Command {
     public CommandResult execute(Model model) throws CommandException {
         requireNonNull(model);
         List<Interview> lastShownList = model.getFilteredInterviewList();
-
         if (targetIndex.getZeroBased() >= lastShownList.size()) {
             throw new CommandException(Messages.MESSAGE_INVALID_INTERVIEW_DISPLAYED_INDEX);
         }
         Interview interviewToPass = lastShownList.get(targetIndex.getZeroBased());
-
         if (!interviewToPass.isPendingStatus()) {
             throw new CommandException(MESSAGE_INTERVIEW_NOT_PENDING_STATUS);
         }
-
         if (!interviewToPass.isPassableInterview()) {
             throw new CommandException(MESSAGE_INTERVIEW_CANNOT_BE_PASSED);
         }
         if (interviewToPass.getApplicant().isHired()) {
             throw new CommandException(MESSAGE_APPLICANT_HAS_JOB);
         }
-
         Position oldPosition = interviewToPass.getPosition();
         Position newPosition = interviewToPass.getPosition().extendOffer();
         Interview passedInterview = new Interview(interviewToPass.getApplicant(), interviewToPass.getDate(),

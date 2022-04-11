@@ -37,7 +37,6 @@ public class DeleteInterviewCommand extends DeleteCommand {
         if (targetIndex.getZeroBased() >= lastShownList.size()) {
             throw new CommandException(Messages.MESSAGE_INVALID_INTERVIEW_DISPLAYED_INDEX);
         }
-
         Interview interviewToDelete = lastShownList.get(targetIndex.getZeroBased());
         model.deleteInterview(interviewToDelete);
 
@@ -46,7 +45,6 @@ public class DeleteInterviewCommand extends DeleteCommand {
             Position newPosition = interviewToDelete.getPosition().rejectOffer();
             model.updatePosition(oldPosition, newPosition);
         }
-
         return new CommandResult(String.format(MESSAGE_DELETE_INTERVIEW_SUCCESS, interviewToDelete),
                 getCommandDataType());
     }

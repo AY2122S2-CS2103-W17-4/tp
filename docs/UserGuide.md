@@ -66,6 +66,8 @@ from offering positions to scheduling interviews with candidates. It is optimise
 * Extraneous parameters for commands that do not take in parameters (such as `exit`) will be ignored.<br>
   e.g. if the command specifies `exit 123`, it will be interpreted as `exit`.
 
+* The largest value for a positive integer is 2147483647, which is the maximum value usable for all the index.
+
 </div>
 
 
