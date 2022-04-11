@@ -502,7 +502,7 @@ Priorities: High (must have) - `* * *`, Medium (nice to have) - `* *`, Low (unli
 
       Use case resumes at step 2.
 
-#### **Use case 02: Adding an applicant **
+#### **Use case 02: Adding an applicant**
 
 **MSS**
 
